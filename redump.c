@@ -76,7 +76,7 @@ main (int argc, char **argv) {
         };
       }
     } else { 
-			ring_insert(c);
+      ring_insert(c);
       if(JUST_SAW("VALUES")) in_values = true;
     }
     
