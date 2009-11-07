@@ -39,7 +39,7 @@ just_saw(char* string, int len) {
 int
 main (int argc, char **argv) {
   int c;
-  while((c = ring_insert(getchar())) != EOF) {
+  while((c = getchar()) != EOF) {
     if(in_values) {
       if(in_valueset){
         if(in_string){
@@ -76,6 +76,7 @@ main (int argc, char **argv) {
         };
       }
     } else { 
+			ring_insert(c);
       if(JUST_SAW("VALUES")) in_values = true;
     }
     
