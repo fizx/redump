@@ -18,12 +18,11 @@ static bool in_valueset = false;
 static int buffer[BUF_SIZE];
 static int pos = 0;
 
-static int
+static void
 ring_insert(int c) {
   buffer[pos] = c;
   pos++;
   if(pos == BUF_SIZE) pos = 0;
-  return c;
 }
 
 static bool
@@ -77,7 +76,7 @@ main (int argc, char **argv) {
       }
     } else { 
       ring_insert(c);
-      if(JUST_SAW("VALUES")) in_values = true;
+      if(c == 'S' && JUST_SAW("VALUES")) in_values = true;
     }
     
   }
