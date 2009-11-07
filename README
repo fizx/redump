@@ -1,0 +1,4 @@
+A simple state machine SQL parser to convert single-table INSERT-style mysqldumps into tab-separated values (TSV).  It has no dependencies, and is written in C.  I'm using it to convert the wikipedia dumps like enwiki-20091103-category.sql.gz for awk-style processing, without the overhead of going through the full mysql stack.
+
+  Usage:
+  cat enwiki-20091103-category.sql.gz | gunzip | ./redump > out.tsv

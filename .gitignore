@@ -1,0 +1,6 @@
+*.o
+redump
+autom4te.cache
+.deps
+config.*
+Makefile

@@ -1,0 +1,6 @@
+AC_INIT([redump], [0.1.0])
+AM_INIT_AUTOMAKE()
+AC_CONFIG_SRCDIR([configure.ac])
+AC_PROG_CC_C99
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT
